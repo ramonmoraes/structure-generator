@@ -1,13 +1,15 @@
 module.exports = class FolderNode {
-  constructor(name, isFolder) {
-    this.name = name;
-    this.isFolder = isFolder;
+  constructor(options) {
+    this.name = options.name;
+    this.isFolder = options.isFolder;
+    this.spaces = options.spaces;
+    
     this.childrens = [];
     this.parent = null;
   }
 
-  generateFolderNode() {
-    const children = new FolderNode();
+  generateFolderNode(options) {
+    const children = new FolderNode(options);
 
     this.childrens.push(children);
     children.parent = this;
