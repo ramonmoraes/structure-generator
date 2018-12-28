@@ -8,13 +8,9 @@ module.exports = class FolderNode {
     this.parent = null;
   }
 
-  generateFolderNode(options) {
-    const children = new FolderNode(options);
-
-    this.childrens.push(children);
-    children.parent = this;
-
-    return children;
+  addChildren(childrenNode) {
+    this.childrens.push(childrenNode);
+    childrenNode.parent = this;
   }
 
   getFullPath() {
