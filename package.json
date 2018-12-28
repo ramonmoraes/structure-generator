@@ -1,0 +1,30 @@
+{
+  "name": "structure-generator",
+  "version": "0.0.1",
+  "description": "A simple dev-dependencie to create a folder structure over given text",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramonmoraes/structure-generator.git"
+  },
+  "keywords": [
+    "project",
+    "structure",
+    "architecture",
+    "devops",
+    "script",
+    "folder",
+    "generator",
+    "javascript"
+  ],
+  "author": "Ramon Moraes <ramon.moraes94@gmail.com> (https://github.com/ramonmoraes)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramonmoraes/structure-generator/issues"
+  },
+  "homepage": "https://github.com/ramonmoraes/structure-generator#readme"
+}
