@@ -28,8 +28,10 @@ class Project {
     );
   }
 
-  createProject(nodes = this.getBasicFolderNodes()) {
+  createProject() {
+    const nodes = this.getBasicFolderNodes()
     let root;
+
     for (let i = 0; i < nodes.length; i++) {
       const node = nodes[i];
       if (i == 0) root = node;
@@ -39,6 +41,7 @@ class Project {
         this.appendNodes(node, nextNode);   
       }
     }
+    
     return root;
   }
 
