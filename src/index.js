@@ -32,13 +32,14 @@ class Project {
     let root;
     for (let i = 0; i < nodes.length; i++) {
       const node = nodes[i];
-      if (i == 0) project = node;
+      if (i == 0) root = node;
 
       if (i != nodes.length - 1) {
         const nextNode = nodes[i + 1];
         this.appendNodes(node, nextNode);   
       }
     }
+    return root;
   }
 
   appendNodes(node, nextNode) {
