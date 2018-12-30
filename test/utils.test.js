@@ -20,7 +20,7 @@ describe('Utils', () => {
         expect(isFolder(file)).to.be.false;
 
         const cleanFolder = "folder";
-        const cleanFolderRegex = /\w+/
-        expect(isFolder(cleanFolder, cleanFolder)).to.be.true;
+        const cleanFolderRegex = /\w+/;
+        expect(isFolder(cleanFolder, cleanFolderRegex)).to.be.true;
     })
 });
