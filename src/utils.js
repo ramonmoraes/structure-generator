@@ -7,8 +7,7 @@ const countSpacesBefore = str => {
   }
 };
 
-const isFolder = str => {
-  const folderRegex = /\w+\//;
+const isFolder = (str, folderRegex = /\w+\//) => {
   return str.match(folderRegex) != null;
 };
 
