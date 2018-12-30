@@ -7,13 +7,12 @@ const countSpacesBefore = str => {
   }
 };
 
-const ENDING_WITH_SLASH_REGEX = /\w+\//
+const ENDING_WITH_SLASH_REGEX = /\w+\//;
 const isFolder = (str, folderRegex = ENDING_WITH_SLASH_REGEX) => {
   return str.match(folderRegex) != null;
 };
 
-
-const TO_BE_REMOVED_CHARACTERS = ['-', '\/', '/', '\''];
+const TO_BE_REMOVED_CHARACTERS = ["-", "/", "/", "'"];
 
 const cleanName = str => {
   let cleanedString = str;
@@ -24,7 +23,7 @@ const cleanName = str => {
 };
 
 module.exports = {
-    countSpacesBefore,
-    isFolder,
-    cleanName
-}
+  countSpacesBefore,
+  isFolder,
+  cleanName
+};
