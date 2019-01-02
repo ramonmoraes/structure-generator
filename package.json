@@ -7,6 +7,7 @@
     "structure-generator": "bin/index.js"
   },
   "scripts": {
+    "example": "node src/index.js example/projectStructure.md example",
     "dev": "nodemon src/index.js",
     "test": "mocha test/*",
     "test:watch": "mocha test/* --watch",
