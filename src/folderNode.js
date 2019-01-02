@@ -1,7 +1,6 @@
 module.exports = class FolderNode {
   constructor(options) {
     this.name = options.name;
-    this.isFolder = options.isFolder;
     this.spaces = options.spaces;
 
     this.childrens = [];

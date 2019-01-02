@@ -12,7 +12,6 @@ module.exports = class Project {
       ele =>
         new FolderNode({
           name: cleanName(ele),
-          isFolder: isFolder(ele),
           spaces: countSpacesBefore(ele)
         })
     );

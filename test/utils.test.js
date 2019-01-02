@@ -17,18 +17,6 @@ describe('Utils', () => {
         expect(countSpacesBefore(onlyspaces)).to.be.equal(0);
     })
 
-    it('isFolder should reconize a folder pattern', () => {
-        const folder = "folder/";
-        expect(isFolder(folder)).to.be.true;
-
-        const file = "file"
-        expect(isFolder(file)).to.be.false;
-
-        const cleanFolder = "folder";
-        const cleanFolderRegex = /\w+/;
-        expect(isFolder(cleanFolder, cleanFolderRegex)).to.be.true;
-    });
-
     it("cleanName should remove special characteres", () => {
         expect(cleanName("file-na'me")).to.be.equal("filename");
         expect(cleanName("filename.txt")).to.be.equal("filename.txt");
