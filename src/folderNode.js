@@ -10,6 +10,7 @@ module.exports = class FolderNode {
 
   addChildren(childrenNode) {
     this.childrens.push(childrenNode);
+    // eslint-disable-next-line
     childrenNode.parent = this;
   }
 
