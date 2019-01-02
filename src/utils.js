@@ -2,7 +2,7 @@ const countSpacesBefore = str => {
   let spacesCount = 0;
   const wordArr = str.split("");
   for (let i = 0; wordArr.length; i++) {
-    if (!wordArr[i].match(/( |\s)/)) return spacesCount;
+    if (wordArr[i] && !wordArr[i].match(/( |\s)/)) return spacesCount;
     spacesCount++;
   }
 };
