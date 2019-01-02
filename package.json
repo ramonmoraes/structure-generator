@@ -13,7 +13,8 @@
     "test:watch": "mocha test/* --watch",
     "lint": "eslint src/* test/*",
     "lint:fix": "eslint src/* test/* --fix",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepublish": "npm run lint && npm run build"
   },
   "repository": {
     "type": "git",
