@@ -1,20 +1,19 @@
-const { cleanName, countSpacesBefore } = require("./utils.js");
-const FolderNode = require("./folderNode.js");
+const { cleanName, countSpacesBefore } = require('./utils.js');
+const FolderNode = require('./folderNode.js');
 
 module.exports = class Project {
-  constructor(template = "", options = {}) {
-    this.elements = template.split("\n").filter(str => str != "");
+  constructor(template = '', options = {}) {
+    this.elements = template.split('\n').filter(str => str != '');
     this.relativePath = options.relativePath;
     this.root = this.getRoot();
   }
 
   getBasicFolderNodes() {
     return this.elements.map(
-      ele =>
-        new FolderNode({
-          name: cleanName(ele),
-          spaces: countSpacesBefore(ele)
-        })
+      ele => new FolderNode({
+        name: cleanName(ele),
+        spaces: countSpacesBefore(ele),
+      }),
     );
   }
 

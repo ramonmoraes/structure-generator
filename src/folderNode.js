@@ -21,4 +21,4 @@ module.exports = class FolderNode {
     }
     return this.parent.getFullPath(parents);
   }
-}
+};

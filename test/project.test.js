@@ -1,10 +1,10 @@
-const { expect } = require("chai");
-const { describe } = require("mocha");
+const { expect } = require('chai');
+const { describe } = require('mocha');
 
-const Project = require("../src/project.js");
+const Project = require('../src/project.js');
 
-describe("Project", () => {
-  it("Should build a project correctly", () => {
+describe('Project', () => {
+  it('Should build a project correctly', () => {
     const template = `
     root/
       folder1/
@@ -16,7 +16,7 @@ describe("Project", () => {
 
     const root = new Project(template).root;
     expect(root.childrens.length).to.be.equal(3);
-    
+
     const folder1 = root.childrens[0];
     expect(folder1.childrens.length).to.be.equal(2);
   });
