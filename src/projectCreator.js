@@ -10,7 +10,7 @@ function appendChildrenPaths(node, arr = []) {
 function projectCreator(project) {
   const projectPaths = [];
   appendChildrenPaths(project.root, projectPaths);
-
+  console.log(projectPaths)
   projectPaths.forEach(path => {
     if (path.includes(".")) {
       fs.writeFileSync(path);

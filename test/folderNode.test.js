@@ -32,7 +32,7 @@ describe("FolderNode", () => {
   });
 
   it("Should add pre path only to root node", () => {
-    const dadNode = new FolderNode({ name: "dad", spaces: 0, path: ".." });
+    const dadNode = new FolderNode({ name: "dad", spaces: 0, relativePath: ".." });
     expect(dadNode.getFullPath()).to.be.equal("../dad");
    
     const sonNode = new FolderNode({ name: "son", spaces: 2 });

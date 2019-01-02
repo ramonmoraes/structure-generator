@@ -4,6 +4,7 @@ const FolderNode = require("./folderNode.js");
 module.exports = class Project {
   constructor(template = "", options = {}) {
     this.elements = template.split("\n").filter(str => str != "");
+    this.relativePath = options.relativePath;
     this.root = this.getRoot();
   }
 
@@ -29,7 +30,7 @@ module.exports = class Project {
         this.appendNodes(node, nextNode);
       }
     }
-
+    root.relativePath = this.relativePath;
     return root;
   }
 
