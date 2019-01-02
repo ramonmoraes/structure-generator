@@ -14,7 +14,7 @@ structure-generator 'template-file-path' 'create-location-path'
 `;
 
 const args = process.argv.slice(2);
-if (args.length === 0 || args.indexOf('-h') != -1) {
+if (args.length === 0 || args.indexOf('-h') !== -1) {
   console.info(infoMessage);
 } else {
   const filePath = args[0];

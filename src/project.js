@@ -3,7 +3,7 @@ const FolderNode = require('./folderNode.js');
 
 module.exports = class Project {
   constructor(template = '', options = {}) {
-    this.elements = template.split('\n').filter(str => str != '');
+    this.elements = template.split('\n').filter(str => str !== '');
     this.relativePath = options.relativePath;
     this.root = this.getRoot();
   }
@@ -24,7 +24,7 @@ module.exports = class Project {
       const node = nodes[i];
       if (i === 0) root = node;
 
-      if (i != nodes.length - 1) {
+      if (i !== nodes.length - 1) {
         const nextNode = nodes[i + 1];
         this.appendNodes(node, nextNode);
       }
