@@ -14,7 +14,8 @@ describe('Project', () => {
       folder2/
     `;
 
-    const root = new Project(template).root;
+    const project = new Project(template);
+    const { root } = project;
     expect(root.childrens.length).to.be.equal(3);
 
     const folder1 = root.childrens[0];

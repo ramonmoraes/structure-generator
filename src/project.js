@@ -20,7 +20,7 @@ module.exports = class Project {
   getRoot() {
     const nodes = this.getBasicFolderNodes();
     let root;
-    for (let i = 0; i < nodes.length; i++) {
+    for (let i = 0; i < nodes.length; i += 1) {
       const node = nodes[i];
       if (i === 0) root = node;
 

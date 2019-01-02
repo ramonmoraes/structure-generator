@@ -8,7 +8,9 @@ describe('FolderNode', () => {
     const dadNode = new FolderNode({ name: 'dad', spaces: 0 });
     const sonNode = new FolderNode({ name: 'son', spaces: 2 });
 
+    // eslint-disable-next-line
     expect(sonNode.parent).to.be.null;
+    // eslint-disable-next-line
     expect(dadNode.parent).to.be.null;
 
     expect(dadNode.childrens.length).to.be.equal(0);
