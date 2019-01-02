@@ -12,14 +12,19 @@ function projectCreator(project) {
   const projectPaths = [];
   appendChildrenPaths(project.root, projectPaths);
   console.log(projectPaths)
+
   projectPaths.forEach(projectPath => {
-    projectPath = path.join(__dirname, projectPath)
-    if (projectPath.includes(".")) {
-      fs.writeFileSync(projectPath);
-    } else {
-      fs.mkdirSync(projectPath, { recursive: true });
-    }
+    projectPath = path.join(process.env.INIT_CWD, projectPath);
+    createCorrectFile(projectPath);
   });
+}
+
+function createCorrectFile(projectPath) {
+  if (projectPath.includes(".")) {
+    fs.writeFileSync(projectPath);
+  } else {
+    fs.mkdirSync(projectPath, { recursive: true });
+  }
 }
 
 module.exports = projectCreator;
