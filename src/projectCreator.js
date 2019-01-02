@@ -2,6 +2,9 @@ const fs = require("fs");
 const path = require("path");
 
 function appendChildrenPaths(node, arr = []) {
+  if (arr.length == 0) {
+    arr.push(node.getFullPath());
+  }
   node.childrens.forEach(childNode => {
     arr.push(childNode.getFullPath());
     appendChildrenPaths(childNode, arr);
@@ -21,7 +24,7 @@ function projectCreator(project) {
 
 function createCorrectFile(projectPath) {
   if (projectPath.includes(".")) {
-    fs.writeFileSync(projectPath);
+    fs.writeFileSync(projectPath, '');
   } else {
     fs.mkdirSync(projectPath, { recursive: true });
   }
