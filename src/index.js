@@ -7,6 +7,10 @@ const infoMessage = `Find more infos at: https://github.com/ramonmoraes/structur
 
 Usage:
 structure-generator 'template-file-path' 'create-location-path'
+
+# Template file rules
+1. To be considered a file, it must have a '.(dot)' in it's name
+2. A file to be considered "nested" must have more padding at left then it's "father", before any non-space characters
 `
 
 const args = process.argv.slice(2);
