@@ -4,7 +4,7 @@ const FolderNode = require("./folderNode.js");
 module.exports = class Project {
   constructor(template = "", options = {}) {
     this.elements = template.split("\n").filter(str => str != "");
-    this.createProject();
+    this.project = this.createProject();
   }
 
   getBasicFolderNodes() {
