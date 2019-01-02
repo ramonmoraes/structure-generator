@@ -3,10 +3,14 @@
   "version": "0.0.1",
   "description": "A simple dev-dependencie to create a folder structure over given text",
   "main": "src/index.js",
+  "bin": {
+    "structure-generator": "bin/index.js"
+  },
   "scripts": {
     "dev": "nodemon src/index.js",
     "test": "mocha test/*",
-    "test:watch": "mocha test/* --watch"
+    "test:watch": "mocha test/* --watch",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -31,6 +35,9 @@
   "devDependencies": {
     "chai": "4.2.0",
     "mocha": "5.2.0",
-    "nodemon": "1.18.9"
+    "nodemon": "1.18.9",
+    "rollup": "1.0.0",
+    "rollup-plugin-commonjs": "9.2.0",
+    "rollup-plugin-node-resolve": "4.0.0"
   }
 }
