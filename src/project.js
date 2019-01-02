@@ -4,7 +4,7 @@ const FolderNode = require("./folderNode.js");
 module.exports = class Project {
   constructor(template = "", options = {}) {
     this.elements = template.split("\n").filter(str => str != "");
-    this.project = this.createProject();
+    this.root = this.getRoot();
   }
 
   getBasicFolderNodes() {
@@ -18,10 +18,9 @@ module.exports = class Project {
     );
   }
 
-  createProject() {
+  getRoot() {
     const nodes = this.getBasicFolderNodes();
     let root;
-
     for (let i = 0; i < nodes.length; i++) {
       const node = nodes[i];
       if (i == 0) root = node;
