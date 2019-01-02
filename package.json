@@ -1,6 +1,6 @@
 {
   "name": "structure-generator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple dev-dependencie to create a folder structure over given text",
   "main": "src/index.js",
   "bin": {

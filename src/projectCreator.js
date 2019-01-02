@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 
 function appendChildrenPaths(node, arr = []) {
   node.childrens.forEach(childNode => {
@@ -11,11 +12,12 @@ function projectCreator(project) {
   const projectPaths = [];
   appendChildrenPaths(project.root, projectPaths);
   console.log(projectPaths)
-  projectPaths.forEach(path => {
-    if (path.includes(".")) {
-      fs.writeFileSync(path);
+  projectPaths.forEach(projectPath => {
+    projectPath = path.join(__dirname, projectPath)
+    if (projectPath.includes(".")) {
+      fs.writeFileSync(projectPath);
     } else {
-      fs.mkdirSync(path, { recursive: true });
+      fs.mkdirSync(projectPath, { recursive: true });
     }
   });
 }
