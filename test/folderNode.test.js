@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { describe } = require('mocha');
+const { describe, it } = require('mocha');
 
 const FolderNode = require('../src/folderNode.js');
 
