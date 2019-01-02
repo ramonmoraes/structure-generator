@@ -16,7 +16,7 @@ module.exports = class FolderNode {
 
   getFullPath(parents = []) {
     parents.push(this.name);
-    if (this.parent == null) {
+    if (this.parent === null) {
       const fullPath = this.relativePath ? parents.concat(this.relativePath) : parents;
       return fullPath.reverse().join('/');
     }

@@ -22,7 +22,7 @@ module.exports = class Project {
     let root;
     for (let i = 0; i < nodes.length; i++) {
       const node = nodes[i];
-      if (i == 0) root = node;
+      if (i === 0) root = node;
 
       if (i != nodes.length - 1) {
         const nextNode = nodes[i + 1];
@@ -36,7 +36,7 @@ module.exports = class Project {
   appendNodes(node, nextNode) {
     if (nextNode.spaces > node.spaces) {
       node.addChildren(nextNode);
-    } else if (node.parent && nextNode.spaces == node.spaces) {
+    } else if (node.parent && nextNode.spaces === node.spaces) {
       node.parent.addChildren(nextNode);
     } else if (node.parent) {
       this.appendNodes(node.parent, nextNode);

@@ -13,7 +13,7 @@ function projectCreator(project) {
 }
 
 function appendChildrenPaths(node, arr = []) {
-  if (arr.length == 0) {
+  if (arr.length === 0) {
     arr.push(node.getFullPath());
   }
   node.childrens.forEach((childNode) => {
