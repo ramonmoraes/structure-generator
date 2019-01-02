@@ -7,9 +7,11 @@ describe('Utils', () => {
     it('Count Space should count spaces correctly', () => {
         const twospace = "  twospace";
         const threespace = "   threespace";
+        const onlyspaces = "                  ";
 
         expect(countSpacesBefore(twospace)).to.be.equal(2)
         expect(countSpacesBefore(threespace)).to.be.equal(3)
+        expect(countSpacesBefore(onlyspaces)).to.be.equal(0)
     });
 
     it('isFolder should reconize a folder pattern', () => {
