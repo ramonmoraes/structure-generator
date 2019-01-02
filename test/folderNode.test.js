@@ -30,4 +30,13 @@ describe("FolderNode", () => {
     grandFatherNode.addChildren(dadNode);
     expect(sonNode.getFullPath()).to.be.equal("grandFather/dad/son");
   });
+
+  it("Should add pre path only to root node", () => {
+    const dadNode = new FolderNode({ name: "dad", spaces: 0, path: ".." });
+    expect(dadNode.getFullPath()).to.be.equal("../dad");
+   
+    const sonNode = new FolderNode({ name: "son", spaces: 2 });
+    dadNode.addChildren(sonNode);
+    expect(sonNode.getFullPath()).to.be.equal("../dad/son");
+  });
 });
