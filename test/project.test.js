@@ -3,7 +3,7 @@ const { describe } = require("mocha");
 
 const Project = require("../src/project.js");
 
-describe.only("Project", () => {
+describe("Project", () => {
   it("Should build a project correctly", () => {
     const template = `
     root/
