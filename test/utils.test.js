@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const { describe } = require('mocha');
 
-const { countSpacesBefore, isFolder, cleanName } = require('../src/utils.js');
+const { countSpacesBefore, cleanName } = require('../src/utils.js');
 
 describe('Utils', () => {
     it('Count Space should count spaces correctly', () => {

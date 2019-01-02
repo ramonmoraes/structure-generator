@@ -1,4 +1,4 @@
-const { cleanName, countSpacesBefore, isFolder } = require("./utils.js");
+const { cleanName, countSpacesBefore } = require("./utils.js");
 const FolderNode = require("./folderNode.js");
 
 module.exports = class Project {
