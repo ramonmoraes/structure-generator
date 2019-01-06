@@ -53,3 +53,4 @@ structure.md
 ## Template file rules
 1. To be considered a file, it __must__ have a `.(dot)` in it's name
 2. A file to be considered "nested" __must__ have more padding at left then it's "father", before any non-space characters
+3. The siblings from the outter folder, will not generate anything ([to be fixed](https://github.com/ramonmoraes/structure-generator/issues/2))
