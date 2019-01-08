@@ -53,3 +53,12 @@ structure.md
 ## Template file rules
 1. To be considered a file, it __must__ have a `.(dot)` in it's name
 2. A file to be considered "nested" __must__ have more padding at left then it's "father", before any non-space characters
+
+# Contributing
+1. Fork this project
+2. Make the changes on your forked repository
+3. Make sure the test are passing, running: 
+```
+npm test
+```
+4. Make a pull request ;D
