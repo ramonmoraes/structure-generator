@@ -1,6 +1,6 @@
 # Structure-Generator
 
-A simple dependencie to create a folder structure over given text file
+A simple CLI to create a folder structure over given text file
 
 [![Build Status](https://travis-ci.org/ramonmoraes/structure-generator.svg?branch=master)](https://travis-ci.org/ramonmoraes/structure-generator)
 
